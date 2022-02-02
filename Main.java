@@ -12,7 +12,8 @@ public class Main {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Cmd.execute(false, new String[]{batch});
+                Cmd.execute(true, new String[]{batch});
+
             }
         };
         Timer timer = new Timer();
