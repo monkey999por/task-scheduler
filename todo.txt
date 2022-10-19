@@ -1,3 +1,0 @@
-toolフォルダに直接ソースぶっこんでるからこれをjarに変えて。それぞれ以下のプロジェクト
-https://github.com/monkey999por/cmd_run
-https://github.com/monkey999por/props
