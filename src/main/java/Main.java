@@ -1,5 +1,6 @@
-import tool.Cmd;
-import tool.Setting;
+
+import monkey999.tools.Cmd;
+import monkey999.tools.Setting;
 
 import java.util.Arrays;
 import java.util.Timer;
@@ -14,7 +15,13 @@ public class Main {
             public void run() {
                 Arrays.stream(Setting.getAsString("batch")
                         .split(","))
-                        .forEach(x -> Cmd.execute(true, new String[]{x}));
+                        .forEach(x -> {
+                            try {
+                                Cmd.execute(true, new String[]{x});
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
                 ;
             }
         };
